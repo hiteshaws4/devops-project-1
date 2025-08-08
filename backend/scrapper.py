@@ -3,7 +3,7 @@ import re
 import pymysql
 import os
 
-# --- DB CONFIGURATION (using environment variables) ---
+# --- DB CONFIGURATION (using environment variables) ---#
 db_config = {
     'host': os.getenv('DB_HOST'),
     'user': os.getenv('DB_USER'),
@@ -82,7 +82,7 @@ def extract_tender_details(browser, url):
                     tender_data[key] = val
     return tender_data
 
-# --- Main Execution ---
+# --- Main Execution ---#
 def main():
     browser = mechanicalsoup.StatefulBrowser()
     browser.session.headers.update({
